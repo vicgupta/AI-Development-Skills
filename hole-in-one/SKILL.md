@@ -12,11 +12,72 @@ description: >-
   choice questions so the user can select rather than free-type.
 version: 1.0.0
 metadata:
-  author: Master synthesis
+  author: Master synthesis (assembled by Kanika Gupta)
   license: MIT
-  based_on: >-
-    grill-me, grill-master, wayfinder, customer-research, assumption-mapping,
-    pre-mortem, QUEST, Question Engineering, Fred Brooks design tree, Discovery Pack
+  based_on:
+    # === Primary Skill Sources (direct synthesis) ===
+    - name: grill-me
+      author: Kanika Gupta
+      license: MIT
+      path: .agents/skills/grill-me/SKILL.md
+      contributed: >-
+        Design-tree walking pattern, one-decision-at-a-time MCQ flow,
+        "run a grilling session" trigger mechanism, anti-deflection table
+    - name: grill-master
+      author: Master synthesis
+      license: MIT
+      path: .agents/skills/grill-master/SKILL.md
+      contributed: >-
+        6-phase interrogation arc, Socratic funneling, contradiction-pinning,
+        cognitive interview techniques, Scharff method, SUE (Strategic Use of
+        Evidence), stress-test POC execution, verdict system, depth levels (D1-D5),
+        anti-deflection patterns
+    - name: customer-research
+      author: Kanika Gupta
+      license: MIT
+      path: .agents/skills/customer-research/SKILL.md
+      contributed: >-
+        Jobs-to-be-done framing, voice-of-customer synthesis, persona
+        development, desirability/usability/viability/feasibility assumption
+        categories
+    # === Methodological References (conceptual, not separate skill files) ===
+    - name: Wayfinder
+      source: Referenced in grill-master
+      contributed: >-
+        Fog of war concept, decision ticket mapping, multi-session planning,
+        not-yet-specified list management
+    - name: assumption-mapping
+      source: UX/product practice
+      contributed: >-
+        Assumption categorization (desirability, usability, feasibility, viability,
+        security/ethics, operational), impact × confidence risk scoring, test-now
+        vs test-later disposition
+    - name: pre-mortem
+      source: Project management technique (Gary Klein)
+      contributed: >-
+        "6 months later it failed" scenario framing, primary failure cause
+        identification, assumption extraction from feared outcomes
+    - name: QUEST
+      source: Question Engineering framework
+      contributed: >-
+        Structured question sequencing, MCQ format with recommended options,
+        one-question-per-turn discipline
+    - name: Question Engineering
+      source: UX research methodology
+      contributed: >-
+        Multiple-choice question design rules, free-text vs MCQ decision
+        criteria, options must be mutually exclusive
+    - name: Fred Brooks design tree
+      source: "The Mythical Man-Month" (Fred Brooks, 1975)
+      contributed: >-
+        Depth-first tree walking, upstream-before-downstream dependency
+        ordering, "plan to throw one away" principle, second-system effect
+        awareness
+    - name: Discovery Pack
+      source: Unknown / aggregated
+      contributed: >-
+        Phase 0 intake protocol, baseline capture before interrogation,
+        context loading from codebase
 ---
 
 # Hole-In-One — Complete Technical Specification Interrogation
@@ -934,3 +995,33 @@ Not when the doc is long — when **nothing load-bearing is still fuzzy**.
 3. Then Q0 mode MCQ  
 
 Do not skip Baseline.
+
+---
+
+## Attribution & Sources
+
+This skill is a synthesis of established techniques, methodologies, and existing skills. It would not exist without the work below.
+
+### Direct Skill Sources
+
+| Source | Author | License | What It Contributed |
+|--------|--------|---------|---------------------|
+| [grill-me](https://github.com/vicgupta/AI-Development-Skills) | Kanika Gupta | MIT | Design-tree walking, one-decision-at-a-time MCQ flow, grilling trigger, anti-deflection |
+| [grill-master](https://github.com/vicgupta/AI-Development-Skills) | Master synthesis | MIT | 6-phase interrogation arc, Socratic funnel, contradiction-pinning, Scharff/SUE methods, depth levels D1-D5, verdict system |
+| [customer-research](https://github.com/vicgupta/AI-Development-Skills) | Kanika Gupta | MIT | Jobs-to-be-done framing, persona development, assumption categories (desirability/usability/feasibility/viability) |
+
+### Methodological References
+
+| Method | Origin | What It Contributed |
+|--------|--------|---------------------|
+| **Wayfinder** | Referenced in grill-master | Fog of war concept, decision ticket mapping, multi-session planning |
+| **Assumption mapping** | UX/product practice | Assumption categorization, impact × confidence risk scoring, test-now disposition |
+| **Pre-mortem** | Gary Klein (psychologist) | "It's 6 months later and it failed" scenario, primary failure extraction |
+| **QUEST** | Question Engineering framework | Structured question sequencing, MCQ design with recommended options |
+| **Question Engineering** | UX research methodology | MCQ format rules, mutually exclusive options, free-text vs MCQ criteria |
+| **Fred Brooks design tree** | *The Mythical Man-Month* (1975) | Depth-first tree walking, upstream-before-downstream ordering, plan-to-throw-one-away |
+| **Discovery Pack** | Unknown / aggregated | Phase 0 intake protocol, baseline capture, context loading from codebase |
+
+### License
+
+MIT License. Free to use, modify, and distribute. Attribution appreciated but not required.
