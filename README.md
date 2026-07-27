@@ -1,4 +1,4 @@
-# AI Development Skills
+# Hole-In-One
 
 A collection of reusable skills, agents, and configurations for AI-assisted software development. Includes structured workflows (skills), role-based agents (planning, coding, evaluating), and an opencode config to tie it all together.
 
@@ -55,7 +55,7 @@ The `opencode.jsonc` file configures the agents for use with [opencode](https://
 ## Structure
 
 ```
-AI-Development-Skills/
+hole-in-one/
 ├── README.md
 ├── opencode.jsonc
 ├── hole-in-one/
