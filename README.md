@@ -1,6 +1,6 @@
 # AI Development Skills
 
-A collection of reusable skills and workflows for AI-assisted software development. Each skill is a self-contained `SKILL.md` file that defines a structured process for a specific task — from technical specification to customer research to copywriting.
+A collection of reusable skills, agents, and configurations for AI-assisted software development. Includes structured workflows (skills), role-based agents (planning, coding, evaluating), and an opencode config to tie it all together.
 
 ## Skills
 
@@ -8,22 +8,62 @@ A collection of reusable skills and workflows for AI-assisted software developme
 |-------|-------------|
 | [hole-in-one](./hole-in-one/) | Complete technical specification interrogation — turns vague ideas into implementation-ready specs via MCQ-driven design tree walking |
 
-## How It Works
+## Agents
 
-Each skill follows the same pattern:
-- **Trigger** — when to activate (specific phrases, user intents)
-- **Phases** — structured steps to follow
-- **Output** — what artifact to produce
+Three specialized agents that work together in a pipeline: **Plan → Code → Evaluate**.
 
-Skills are designed to be loaded into AI coding assistants (Claude, Cursor, etc.) and executed as interactive workflows.
+| Agent | Purpose | Permissions |
+|-------|---------|-------------|
+| [planning-agent](./agents/planning-agent.md) | Requirements gathering, specs, PRDs, technical design docs | Read-only (no edits, no shell) |
+| [coding-agent](./agents/coding-agent.md) | Production-ready code from specifications | Full access (edit + shell) |
+| [evaluating-agent](./agents/evaluating-agent.md) | Code review, security audit, quality assessment | Read-only (no edits, no shell) |
+
+### Workflow
+
+```
+User idea → planning-agent (spec) → coding-agent (implementation) → evaluating-agent (review)
+```
+
+The planning-agent never writes code. The coding-agent never writes specs. The evaluating-agent never rewrites — only reports. Each agent is scoped to its job.
+
+## Configuration
+
+The `opencode.jsonc` file configures the agents for use with [opencode](https://opencode.ai):
+
+```jsonc
+{
+  "agent": {
+    "planning-agent": {
+      "mode": "primary",
+      "model": "opencode-go/qwen3.7-plus",
+      "permission": { "edit": "deny", "bash": "deny" }
+    },
+    "coding-agent": {
+      "mode": "primary",
+      "model": "opencode-go/kimi-k2.7-code",
+      "permission": { "edit": "allow", "bash": "allow" }
+    },
+    "evaluating-agent": {
+      "mode": "primary",
+      "model": "opencode-go/deepseek-v4-flash",
+      "permission": { "edit": "deny", "bash": "deny" }
+    }
+  }
+}
+```
 
 ## Structure
 
 ```
 AI-Development-Skills/
 ├── README.md
-└── <skill-name>/
-    └── SKILL.md
+├── opencode.jsonc
+├── hole-in-one/
+│   └── SKILL.md
+└── agents/
+    ├── planning-agent.md
+    ├── coding-agent.md
+    └── evaluating-agent.md
 ```
 
 ## Adding a Skill
@@ -32,6 +72,14 @@ AI-Development-Skills/
 2. Add a `SKILL.md` file with YAML frontmatter (name, description, version, metadata)
 3. Define the workflow phases, MCQ formats, and output templates
 4. Update this README
+
+## Adding an Agent
+
+1. Create a new `.md` file in `agents/`
+2. Add YAML frontmatter with `description` and `mode`
+3. Define the agent's approach, constraints, and example flow
+4. Add a corresponding entry in `opencode.jsonc` with model and permissions
+5. Update this README
 
 ## License
 
