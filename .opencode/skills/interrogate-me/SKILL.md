@@ -1,5 +1,5 @@
 ---
-name: hole-in-one
+name: interrogate-me
 description: >-
   Master skill for uncovering comprehensive, complete technical specifications
   before any code is written. Use when the user wants a technical spec, PRD,
@@ -17,7 +17,7 @@ metadata:
   based_on: grill-me, grill-master, wayfinder, customer-research, assumption-mapping, pre-mortem, QUEST, Question Engineering, Fred Brooks design tree, Discovery Pack
 ---
 
-# Hole-In-One — Complete Technical Specification Interrogation
+# Interrogate-Me — Complete Technical Specification Interrogation
 
 Uncover a **comprehensive, implementation-ready technical specification** by
 walking the design tree one decision at a time. Prefer **multiple-choice
@@ -918,12 +918,12 @@ Not when the doc is long — when **nothing load-bearing is still fuzzy**.
 
 ## Usage
 
-- `/hole-in-one` — full pipeline, auto-detect mode  
-- `/hole-in-one lightweight` — small change path  
-- `/hole-in-one gap-fill` — audit existing draft  
-- `/hole-in-one architecture` — skip product framing  
-- `/hole-in-one wayfinder` — multi-session map  
-- `/hole-in-one resume` — continue from Decisions[] / map  
+- `/interrogate-me` — full pipeline, auto-detect mode  
+- `/interrogate-me lightweight` — small change path  
+- `/interrogate-me gap-fill` — audit existing draft  
+- `/interrogate-me architecture` — skip product framing  
+- `/interrogate-me wayfinder` — multi-session map  
+- `/interrogate-me resume` — continue from Decisions[] / map  
 
 ### First Message Behavior
 
