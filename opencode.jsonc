@@ -4,17 +4,29 @@
     "planning-agent": {
       "mode": "primary",
       "model": "opencode-go/qwen3.7-plus",
-      "permission": { "edit": "deny", "bash": "deny" }
+      "permission": {
+        "edit": "deny",
+        "bash": "deny",
+        "skill": { "*": "allow" }
+      }
     },
     "coding-agent": {
       "mode": "primary",
       "model": "opencode-go/kimi-k2.7-code",
-      "permission": { "edit": "allow", "bash": "allow" }
+      "permission": {
+        "edit": "allow",
+        "bash": "allow",
+        "skill": { "*": "allow" }
+      }
     },
     "evaluating-agent": {
       "mode": "primary",
       "model": "opencode-go/deepseek-v4-flash",
-      "permission": { "edit": "deny", "bash": "deny" }
+      "permission": {
+        "edit": "deny",
+        "bash": "deny",
+        "skill": { "*": "allow" }
+      }
     }
   }
 }
