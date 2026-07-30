@@ -1,11 +1,11 @@
 ---
-name: writePaper
-description: Generate opinionated white papers from deep research. Use when the user says "/writePaper", "write a white paper", "research and write about [topic]", or "deep research on [topic]". Produces 5-10 page executive-style papers with autonomous web research, source trust scoring, and a persistent knowledge base.
+name: write-paper
+description: Generate opinionated white papers from deep research. Use when the user says "/write-paper", "write a white paper", "research and write about [topic]", or "deep research on [topic]". Produces 5-10 page executive-style papers with autonomous web research, source trust scoring, and a persistent knowledge base.
 ---
 
-# writePaper — Deep Research to White Papers
+# write-paper — Deep Research to White Papers
 
-You are executing the writePaper pipeline. Follow each step precisely and do not skip stages.
+You are executing the write-paper pipeline. Follow each step precisely and do not skip stages.
 
 ## Argument Parsing
 
@@ -13,16 +13,16 @@ Parse the user's input to extract:
 
 | Argument | Required | Default | How to extract |
 |----------|----------|---------|----------------|
-| `topic` | Yes | — | The main quoted string or first argument after `/writePaper` |
+| `topic` | Yes | — | The main quoted string or first argument after `/write-paper` |
 | `--sources` | No | None | File paths or URLs listed after `--sources` flag |
-| `--output-dir` | No | `./writepaper-output/` | Path after `--output-dir` flag |
+| `--output-dir` | No | `./write-paper-output/` | Path after `--output-dir` flag |
 | `--tone` | No | `visionary` | One of: `visionary`, `analytical`, `technical` |
 
 If no topic is provided, ask the user for one before proceeding.
 
 ## Step 1: Setup
 
-1. Set the output directory. Default: `./writepaper-output/`
+1. Set the output directory. Default: `./write-paper-output/`
 2. Create a slug from the topic (lowercase, hyphens, max 50 chars). Example: "LLM Fine-Tuning vs RAG" → `llm-fine-tuning-vs-rag`
 3. Create the paper folder: `{output-dir}/{slug}/`
 4. Create the folder structure:
@@ -41,7 +41,7 @@ If no topic is provided, ask the user for one before proceeding.
 Run the KB search script to find relevant prior research:
 
 ```bash
-python3 ~/.writepaper/scripts/kb.py search "{topic}"
+python3 ~/.write-paper/scripts/kb.py search "{topic}"
 ```
 
 - If results are returned, read the matching entries and hold them in context
@@ -307,7 +307,7 @@ Combine all expanded sections into `paper.md`:
 After the paper is complete, index the research into the KB:
 
 ```bash
-python3 ~/.writepaper/scripts/kb.py add \
+python3 ~/.write-paper/scripts/kb.py add \
   --topic "{topic}" \
   --paper-folder "{slug}" \
   --sources-file "{paper-folder}/sources.json" \
@@ -321,7 +321,7 @@ This extracts key findings, keywords, and source metadata into the KB for future
 Present the results to the user:
 
 ```
-writePaper complete!
+write-paper complete!
 
 Paper:          {path}/paper.md
 Outline:        {path}/outline.md
