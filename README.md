@@ -6,7 +6,8 @@ A collection of reusable skills, agents, and configurations for AI-assisted soft
 
 | Skill | Description |
 |-------|-------------|
-| [hole-in-one](./hole-in-one/) | Complete technical specification interrogation — turns vague ideas into implementation-ready specs via MCQ-driven design tree walking |
+| [interrogate-me](./.opencode/skills/interrogate-me/) | Complete technical specification interrogation — turns vague ideas into implementation-ready specs via MCQ-driven design tree walking |
+| [write-paper](./.opencode/skills/write-paper/) | Generate technical research papers using autonomous web research |
 | [deepwrite](./.opencode/skills/deepwrite/) | Generate opinionated white papers from deep research — autonomous web research, source trust scoring, and a persistent knowledge base |
 
 ## Agents
@@ -15,9 +16,9 @@ Three specialized agents that work together in a pipeline: **Plan → Code → E
 
 | Agent | Purpose | Permissions |
 |-------|---------|-------------|
-| [planning-agent](./agents/planning-agent.md) | Requirements gathering, specs, PRDs, technical design docs | Read-only (no edits, no shell) |
-| [coding-agent](./agents/coding-agent.md) | Production-ready code from specifications | Full access (edit + shell) |
-| [evaluating-agent](./agents/evaluating-agent.md) | Code review, security audit, quality assessment | Read-only (no edits, no shell) |
+| [planning-agent](./.opencode/agents/planning-agent.md) | Requirements gathering, specs, PRDs, technical design docs | Read-only (no edits, no shell) |
+| [coding-agent](./.opencode/agents/coding-agent.md) | Production-ready code from specifications | Full access (edit + shell) |
+| [evaluating-agent](./.opencode/agents/evaluating-agent.md) | Code review, security audit, quality assessment | Read-only (no edits, no shell) |
 
 ### Workflow
 
@@ -59,24 +60,30 @@ The `opencode.jsonc` file configures the agents for use with [opencode](https://
 hole-in-one/
 ├── README.md
 ├── opencode.jsonc
-├── hole-in-one/
-│   └── SKILL.md
-└── agents/
-    ├── planning-agent.md
-    ├── coding-agent.md
-    └── evaluating-agent.md
+├── .opencode/
+│   ├── agents/
+│   │   ├── planning-agent.md
+│   │   ├── coding-agent.md
+│   │   └── evaluating-agent.md
+│   └── skills/
+│       ├── interrogate-me/SKILL.md
+│       ├── write-paper/SKILL.md
+│       └── deepwrite/
+│           ├── SKILL.md
+│           ├── config.json
+│           └── scripts/kb.py
 ```
 
 ## Adding a Skill
 
-1. Create a new directory named after the skill
+1. Create a new directory `.opencode/skills/<skill-name>/`
 2. Add a `SKILL.md` file with YAML frontmatter (name, description, version, metadata)
 3. Define the workflow phases, MCQ formats, and output templates
 4. Update this README
 
 ## Adding an Agent
 
-1. Create a new `.md` file in `agents/`
+1. Create a new `.md` file in `.opencode/agents/`
 2. Add YAML frontmatter with `description` and `mode`
 3. Define the agent's approach, constraints, and example flow
 4. Add a corresponding entry in `opencode.jsonc` with model and permissions
