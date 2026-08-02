@@ -6,8 +6,6 @@ A skill for generating comprehensive technical specifications through structured
 
 - `.opencode/agents/` - Custom agents (planning, coding, evaluating)
 - `.opencode/skills/interrogate-me/` - Main interrogate-me skill
-- `.opencode/skills/write-paper/` - Deep research paper generation skill
-- `.opencode/skills/deepwrite/` - Deep research to white papers (SKILL.md + scripts + config)
 
 ## Agents
 
@@ -18,8 +16,6 @@ A skill for generating comprehensive technical specifications through structured
 ## Skills
 
 - **interrogate-me**: Complete technical specification interrogation with MCQ-driven design tree walking
-- **write-paper**: Generate technical research papers using autonomous web research
-- **deepwrite**: Generate opinionated white papers from deep research (web research, source trust scoring, persistent KB)
 
 ## Commands
 
