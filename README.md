@@ -7,6 +7,7 @@ A collection of reusable skills, agents, and configurations for AI-assisted soft
 | Skill | Description |
 |-------|-------------|
 | [hole-in-one](./hole-in-one/) | Complete technical specification interrogation — turns vague ideas into implementation-ready specs via MCQ-driven design tree walking |
+| [deepwrite](./.opencode/skills/deepwrite/) | Generate opinionated white papers from deep research — autonomous web research, source trust scoring, and a persistent knowledge base |
 
 ## Agents
 
