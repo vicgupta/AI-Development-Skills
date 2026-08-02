@@ -8,8 +8,8 @@ A **Claude Code / OpenCode skill** implemented entirely as Markdown. The runtime
 
 ## Key files
 
-- `SKILL.md` — the skill itself. YAML frontmatter (`name`, `version`, `description`, `allowed-tools`) followed by the canonical, numbered pattern list with before/after examples. **This is the source of truth.**
-- `README.md` — for humans: installation, usage, a summary table of the patterns, and a version history.
+- `SKILL.md` — the skill itself. YAML frontmatter (`name`, `description`, `allowed-tools`) followed by the canonical, numbered pattern list with before/after examples. **This is the source of truth.**
+- `README.md` — for humans: installation, usage, and a summary table of the patterns.
 - `artifacts/patterns.json` — machine-readable catalog of the patterns (id, category, watch lists, fixes). Keep in sync with `SKILL.md` when patterns change.
 - `artifacts/quickcheck.md` — rapid-scan checklist (a distillation of `SKILL.md`, not new rules).
 - `artifacts/model-fingerprints.md` — per-model tell tables. Marked weak signal; keep the caveat header if you touch it.
@@ -20,8 +20,7 @@ A **Claude Code / OpenCode skill** implemented entirely as Markdown. The runtime
 `SKILL.md` and `README.md` must stay in sync. When you change behavior or content:
 
 - **Patterns:** the skill currently defines **47 numbered patterns**. If you add, remove, or renumber any, update the README pattern table, its "N Patterns Detected" heading, and every cross-reference in the same change. Keep numbering stable unless you are deliberately renumbering. If the change alters the word lists or fixes, update `artifacts/patterns.json` in the same commit.
-- **Version:** `SKILL.md` frontmatter has a `version:` field and `README.md` has a "Version History" section. Bump both together.
-- **Non-obvious fixes:** if you change the prompt to handle a tricky failure mode (a repeated mis-edit, an unexpected tone shift), add a short note to the README version history explaining what was fixed and why.
+- **Non-obvious fixes:** if you change the prompt to handle a tricky failure mode (a repeated mis-edit, an unexpected tone shift), document the behavior change in the relevant README section.
 
 ## Editing SKILL.md
 

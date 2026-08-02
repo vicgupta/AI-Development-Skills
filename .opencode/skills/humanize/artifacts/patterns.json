@@ -1,6 +1,5 @@
 {
   "skill": "humanize",
-  "version": "3.0.0",
   "patternCount": 47,
   "notes": "Machine-readable catalog of the patterns in SKILL.md. 'watch' entries are phrases or constructions to grep for; 'fix' is the one-line remediation. See SKILL.md for full before/after examples.",
   "patterns": [
