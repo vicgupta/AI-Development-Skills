@@ -19,7 +19,7 @@ from datetime import datetime
 from pathlib import Path
 from collections import Counter
 
-KB_DIR = Path.home() / ".deepwrite" / "kb"
+KB_DIR = Path.cwd() / ".deepwrite" / "kb"
 ENTRIES_DIR = KB_DIR / "entries"
 INDEX_FILE = KB_DIR / "index.json"
 
