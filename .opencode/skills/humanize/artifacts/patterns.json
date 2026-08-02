@@ -1,0 +1,337 @@
+{
+  "skill": "humanize",
+  "version": "3.0.0",
+  "patternCount": 47,
+  "notes": "Machine-readable catalog of the patterns in SKILL.md. 'watch' entries are phrases or constructions to grep for; 'fix' is the one-line remediation. See SKILL.md for full before/after examples.",
+  "patterns": [
+    {
+      "id": 1,
+      "category": "content",
+      "title": "Undue Emphasis on Significance, Legacy, and Broader Trends",
+      "watch": ["stands/serves as", "is a testament/reminder", "vital/significant/crucial/pivotal/key", "underscores/highlights its importance", "reflects broader", "symbolizing its ongoing/enduring", "setting the stage for", "marking/shaping the", "represents/marks a shift", "key turning point", "evolving landscape", "focal point", "indelible mark", "deeply rooted"],
+      "fix": "State what happened in one plain sentence."
+    },
+    {
+      "id": 2,
+      "category": "content",
+      "title": "Undue Emphasis on Notability and Media Coverage",
+      "watch": ["independent coverage", "media outlets", "written by a leading expert", "active social media presence"],
+      "fix": "Cite one specific outlet, date, and quote instead of name-dropping a list."
+    },
+    {
+      "id": 3,
+      "category": "content",
+      "title": "Superficial Analyses with -ing Endings",
+      "watch": ["highlighting", "underscoring", "emphasizing", "ensuring", "reflecting", "symbolizing", "contributing to", "cultivating", "fostering", "encompassing", "showcasing"],
+      "fix": "Cut the present-participle tail; state the fact."
+    },
+    {
+      "id": 4,
+      "category": "content",
+      "title": "Promotional and Advertisement-like Language",
+      "watch": ["boasts a", "vibrant", "rich (figurative)", "profound", "enhancing its", "showcasing", "exemplifies", "commitment to", "natural beauty", "nestled", "in the heart of", "groundbreaking (figurative)", "renowned", "breathtaking", "must-visit", "stunning"],
+      "fix": "Replace with neutral, concrete description."
+    },
+    {
+      "id": 5,
+      "category": "content",
+      "title": "Vague Attributions and Weasel Words",
+      "watch": ["Industry reports", "Observers have cited", "Experts argue", "Some critics argue"],
+      "fix": "Name the actual source with a date."
+    },
+    {
+      "id": 6,
+      "category": "content",
+      "title": "Outline-like Challenges and Future Prospects Sections",
+      "watch": ["Despite its... faces several challenges", "Despite these challenges", "Challenges and Legacy", "Future Outlook"],
+      "fix": "Give specific challenges with facts, not a boilerplate section."
+    },
+    {
+      "id": 7,
+      "category": "language",
+      "title": "Overused AI Vocabulary Words",
+      "watch": ["Actually", "additionally", "align with", "crucial", "delve", "emphasizing", "enduring", "enhance", "fostering", "garner", "highlight (verb)", "interplay", "intricate/intricacies", "key (adjective)", "landscape (abstract)", "pivotal", "showcase", "tapestry", "testament", "underscore (verb)", "valuable", "vibrant"],
+      "fix": "Prefer plain synonyms; these words co-occur, so clusters matter."
+    },
+    {
+      "id": 8,
+      "category": "language",
+      "title": "Avoidance of is/are (Copula Avoidance)",
+      "watch": ["serves as", "stands as", "marks", "represents [a]", "boasts", "features", "offers"],
+      "fix": "Use is/are/has."
+    },
+    {
+      "id": 9,
+      "category": "language",
+      "title": "Negative Parallelisms and Tailing Negations",
+      "watch": ["Not only...but", "It's not just X, it's Y", "trailing 'no X' fragments (e.g. 'no guessing')"],
+      "fix": "Write the point as an ordinary clause."
+    },
+    {
+      "id": 10,
+      "category": "language",
+      "title": "Rule of Three Overuse",
+      "watch": ["three-item lists of parallel nouns or phrases"],
+      "fix": "Use a natural number of items."
+    },
+    {
+      "id": 11,
+      "category": "language",
+      "title": "Elegant Variation (Synonym Cycling)",
+      "watch": ["protagonist/main character/central figure", "repeated renaming of the same referent"],
+      "fix": "Repeat the name when it is clearest."
+    },
+    {
+      "id": 12,
+      "category": "language",
+      "title": "False Ranges",
+      "watch": ["from X to Y where X and Y are not on a shared scale"],
+      "fix": "List the items directly."
+    },
+    {
+      "id": 13,
+      "category": "language",
+      "title": "Passive Voice and Subjectless Fragments",
+      "watch": ["No X needed", "X are preserved automatically", "subjectless imperative fragments"],
+      "fix": "Name the actor when it helps clarity."
+    },
+    {
+      "id": 14,
+      "category": "style",
+      "title": "Em Dashes (and En Dashes): Cut Them",
+      "watch": ["\u2014", "\u2013", " -- "],
+      "fix": "Hard constraint: replace with period, comma, colon, or parentheses."
+    },
+    {
+      "id": 15,
+      "category": "style",
+      "title": "Overuse of Boldface",
+      "watch": ["**...** used to emphasize multiple terms"],
+      "fix": "Remove mechanical emphasis."
+    },
+    {
+      "id": 16,
+      "category": "style",
+      "title": "Inline-Header Vertical Lists",
+      "watch": ["**Header:** text repeating the header as a list item"],
+      "fix": "Convert to prose."
+    },
+    {
+      "id": 17,
+      "category": "style",
+      "title": "Title Case in Headings",
+      "watch": ["Headings with every main word capitalized"],
+      "fix": "Use sentence case."
+    },
+    {
+      "id": 18,
+      "category": "style",
+      "title": "Emojis",
+      "watch": ["emoji characters", "U+1F300-U+1FAFF ranges"],
+      "fix": "Remove; write the words."
+    },
+    {
+      "id": 19,
+      "category": "style",
+      "title": "Curly Quotation Marks",
+      "watch": ["\u201c", "\u201d", "\u2018", "\u2019"],
+      "fix": "Use straight quotes (weak alone; counts in clusters)."
+    },
+    {
+      "id": 20,
+      "category": "communication",
+      "title": "Collaborative Communication Artifacts",
+      "watch": ["I hope this helps", "Of course!", "Certainly!", "You're absolutely right!", "Would you like", "Want me to...?", "Should I continue?", "let me know", "here is a..."],
+      "fix": "Remove chatbot correspondence framing."
+    },
+    {
+      "id": 21,
+      "category": "communication",
+      "title": "Knowledge-Cutoff Disclaimers and Speculative Gap-Filling",
+      "watch": ["as of [date]", "Up to my last training update", "While specific details are limited", "based on available information", "not publicly available", "maintains a low profile", "keeps personal details private", "likely grew up", "it is believed that"],
+      "fix": "Say what is not known, or cut the sentence; never dress a guess as fact."
+    },
+    {
+      "id": 22,
+      "category": "communication",
+      "title": "Sycophantic/Servile Tone",
+      "watch": ["Great question!", "You're absolutely right", "That's an excellent point"],
+      "fix": "Respond directly without praise."
+    },
+    {
+      "id": 23,
+      "category": "filler",
+      "title": "Filler Phrases",
+      "watch": ["In order to", "Due to the fact that", "At this point in time", "In the event that", "has the ability to", "It is important to note that"],
+      "fix": "Use the plain form (to, because, now, if, can)."
+    },
+    {
+      "id": 24,
+      "category": "filler",
+      "title": "Excessive Hedging",
+      "watch": ["could potentially possibly", "it might be argued", "to a certain extent", "arguably"],
+      "fix": "One hedge maximum; prefer committing."
+    },
+    {
+      "id": 25,
+      "category": "filler",
+      "title": "Generic Positive Conclusions",
+      "watch": ["The future looks bright", "Exciting times lie ahead", "journey toward excellence", "major step in the right direction"],
+      "fix": "End on a specific fact or plan."
+    },
+    {
+      "id": 26,
+      "category": "style",
+      "title": "Hyphenated Word Pair Overuse",
+      "watch": ["third-party", "cross-functional", "client-facing", "data-driven", "decision-making", "well-known", "high-quality", "real-time", "long-term", "end-to-end"],
+      "fix": "Keep attributive-position hyphens; drop predicate-position hyphens."
+    },
+    {
+      "id": 27,
+      "category": "style",
+      "title": "Persuasive Authority Tropes",
+      "watch": ["The real question is", "at its core", "in reality", "what really matters", "fundamentally", "the deeper issue", "the heart of the matter"],
+      "fix": "State the point without ceremony."
+    },
+    {
+      "id": 28,
+      "category": "style",
+      "title": "Signposting and Announcements",
+      "watch": ["Let's dive in", "let's explore", "let's break this down", "here's what you need to know", "now let's look at", "without further ado"],
+      "fix": "Start with the content."
+    },
+    {
+      "id": 29,
+      "category": "style",
+      "title": "Fragmented Headers",
+      "watch": ["heading followed by a one-line paragraph that restates it"],
+      "fix": "Let the heading do the work."
+    },
+    {
+      "id": 30,
+      "category": "style",
+      "title": "Diff-Anchored Writing",
+      "watch": ["This was added to replace...", "narrative of a change instead of current state"],
+      "fix": "Describe the thing as it is, not what changed."
+    },
+    {
+      "id": 31,
+      "category": "style",
+      "title": "Manufactured Punchlines and Staccato Drama",
+      "watch": ["runs of 1-4 word declarative fragments ('No X. No Y. No Z.')"],
+      "fix": "Vary rhythm; keep at most one short emphasis."
+    },
+    {
+      "id": 32,
+      "category": "style",
+      "title": "Aphorism Formulas",
+      "watch": ["X is the Y of Z", "X becomes a trap", "X is not a tool but a mirror", "the language of", "the currency of", "the architecture of"],
+      "fix": "Replace the formula with the concrete claim."
+    },
+    {
+      "id": 33,
+      "category": "style",
+      "title": "Conversational Rhetorical Openers",
+      "watch": ["Honestly?", "Look,", "Here's the thing", "The thing is", "Let's be honest", "Real talk"],
+      "fix": "Just say the thing; no theatrical pause-and-reveal."
+    },
+    {
+      "id": 34,
+      "category": "cadence",
+      "title": "Uniform Sentence Cadence (Low Burstiness)",
+      "watch": ["most sentences 15-25 words, even rhythm, no short/long variation"],
+      "fix": "Vary sentence length deliberately."
+    },
+    {
+      "id": 35,
+      "category": "cadence",
+      "title": "Eerie Uniformity (Absence of Imperfection)",
+      "watch": ["no contractions, no dropped 'that', uniformly perfect punctuation, no colloquial release"],
+      "fix": "Let natural imperfections in; do not add errors."
+    },
+    {
+      "id": 36,
+      "category": "cadence",
+      "title": "Treadmill Effect (Low Information Density)",
+      "watch": ["same idea restated in fresh words; length without new information"],
+      "fix": "Cut restatement; raise information per word."
+    },
+    {
+      "id": 37,
+      "category": "register",
+      "title": "Latinate Bias (High-Register Word Choice)",
+      "watch": ["utilize", "commence", "demonstrate", "obtain", "additional", "subsequently", "approximately", "in order to", "authored", "transported", "passed away", "relocate", "numerous", "assist", "purchase", "endeavor", "ascertain"],
+      "fix": "Prefer short everyday verbs (use, start, show, get, more, then, about)."
+    },
+    {
+      "id": 38,
+      "category": "register",
+      "title": "Positivity Bias and Motivational Framing",
+      "watch": ["empowers", "unlocks", "transforms", "revolutionizes", "redefines", "thrives", "inspiring", "uplifting", "journey", "vibrant", "commitment to excellence", "continues to grow"],
+      "fix": "Write neutrally and concretely; cheerleading on cue is a tell."
+    },
+    {
+      "id": 39,
+      "category": "register",
+      "title": "Suspiciously Balanced Perspectives",
+      "watch": ["While some argue X, others contend Y", "On one hand... on the other hand", "both perspectives have merit"],
+      "fix": "Make a judgment call where the evidence supports one side."
+    },
+    {
+      "id": 40,
+      "category": "register",
+      "title": "Hedge Openers and Topic-Setting Formulas",
+      "watch": ["In today's rapidly evolving landscape", "In an era where", "In the realm of", "In the world of", "When it comes to", "In the fast-paced world of", "It's no secret that"],
+      "fix": "Cut to the subject."
+    },
+    {
+      "id": 41,
+      "category": "register",
+      "title": "Editorializing Asides",
+      "watch": ["it's important to note that", "it's worth noting that", "it should be noted that", "interestingly", "notably", "worth mentioning", "needless to say", "as one might expect", "unsurprisingly"],
+      "fix": "State the fact; drop the aside."
+    },
+    {
+      "id": 42,
+      "category": "register",
+      "title": "Formulaic Contrast Micro-Templates",
+      "watch": ["Not because X. But because Y.", "It's not about X, it's about Y", "No X. No Y. Just Z.", "And the X? Y.", "The result? ...", "Here's the thing:"],
+      "fix": "Write a plain claim in a plain sentence."
+    },
+    {
+      "id": 43,
+      "category": "artifact",
+      "title": "Model-Specific Artifact Strings",
+      "watch": ["turn0search0", "[cite: 1]", "【87†L55-67】", "oaicite", "oai_citation", "attributableIndex", "[span_1]", "grok_card", "grok_render_citation_card_json", ":::writing", ":::system", ":::user", "[attached_file:1]", "ppl-ai-file-upload", "```wikitext"],
+      "fix": "Strip artifacts; verify every cited source."
+    },
+    {
+      "id": 44,
+      "category": "artifact",
+      "title": "Markdown Leaking into Non-Markdown Text",
+      "watch": ["**bold**", "`backticks`", "[text](url)", "# hash headings", "--- horizontal rules in plain prose"],
+      "fix": "Render as plain prose."
+    },
+    {
+      "id": 45,
+      "category": "artifact",
+      "title": "Structural Quirks",
+      "watch": ["skipped heading levels", "thematic break before a heading", "2-3 row data tables", "'List of X' is a curated... lead", "equal-length paragraphs"],
+      "fix": "Fix heading levels; remove decorative rules; name the actual subject."
+    },
+    {
+      "id": 46,
+      "category": "artifact",
+      "title": "Fabricated or Unverifiable Citations",
+      "watch": ["DOI/ISBN failing checksum", "journal-volume-page combos that do not exist", "book citations without page numbers", "named references never used", "left-in citation markers (\u21a9, [citation needed])", "utm_source=chatgpt.com", "utm_source=perplexity", "referrer=grok.com", "links that 404 with no archive", "according to a recent study"],
+      "fix": "Verify every citation; replace or remove anything unverifiable."
+    },
+    {
+      "id": 47,
+      "category": "artifact",
+      "title": "Edit-Summary and Reviewer-Addressing Phrasing",
+      "watch": ["addressing reviewer feedback", "while preserving/retaining X", "made sure to include sourced content", "rewritten to ensure compliance"],
+      "fix": "Describe the content, not the edit that produced it."
+    }
+  ]
+}

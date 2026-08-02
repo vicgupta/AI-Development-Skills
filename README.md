@@ -8,6 +8,7 @@ A collection of reusable skills, agents, and configurations for AI-assisted soft
 |-------|-------------|
 | [interrogate-me](./.opencode/skills/interrogate-me/) | Complete technical specification interrogation — turns vague ideas into implementation-ready specs via MCQ-driven design tree walking |
 | [deepwrite](./.opencode/skills/deepwrite/) | Generate opinionated white papers from deep research — autonomous web research, source trust scoring, and a persistent knowledge base |
+| [humanize](./.opencode/skills/humanize/) | Remove signs of AI-generated writing using 47 researched patterns, a rapid checklist, and a mechanical pre-pass |
 
 ## Agents
 
@@ -66,10 +67,15 @@ hole-in-one/
 │   │   └── evaluating-agent.md
 │   └── skills/
 │       ├── interrogate-me/SKILL.md
-│       └── deepwrite/
+│       ├── deepwrite/
+│       │   ├── SKILL.md
+│       │   ├── config.json
+│       │   └── scripts/kb.py
+│       └── humanize/
 │           ├── SKILL.md
-│           ├── config.json
-│           └── scripts/kb.py
+│           ├── README.md
+│           ├── artifacts/
+│           └── scripts/humanize.py
 ```
 
 ## Adding a Skill
