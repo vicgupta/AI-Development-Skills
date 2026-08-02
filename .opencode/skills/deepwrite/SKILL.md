@@ -41,8 +41,10 @@ If no topic is provided, ask the user for one before proceeding.
 Run the KB search script to find relevant prior research:
 
 ```bash
-python3 ~/.deepwrite/scripts/kb.py search "{topic}"
+python3 .opencode/skills/deepwrite/scripts/kb.py search "{topic}"
 ```
+
+> The KB script is bundled with this skill at `scripts/kb.py` (same directory as this SKILL.md). If the path above doesn't resolve, locate it relative to this file and run it directly.
 
 - If results are returned, read the matching entries and hold them in context
 - These will be used to enrich the outline and section content
@@ -307,7 +309,7 @@ Combine all expanded sections into `paper.md`:
 After the paper is complete, index the research into the KB:
 
 ```bash
-python3 ~/.deepwrite/scripts/kb.py add \
+python3 .opencode/skills/deepwrite/scripts/kb.py add \
   --topic "{topic}" \
   --paper-folder "{slug}" \
   --sources-file "{paper-folder}/sources.json" \
