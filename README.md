@@ -1,6 +1,6 @@
 # Hole-In-One
 
-A collection of reusable skills, agents, and configurations for AI-assisted software development. Includes structured workflows (skills), role-based agents (planning, coding, evaluating), and an opencode config to tie it all together.
+A collection of reusable skills, agents, plugins, and configurations for AI-assisted software development. Includes structured workflows (skills), role-based agents (planning, coding, evaluating), plugins (token usage tracking), and an opencode config to tie it all together.
 
 ## Skills
 
@@ -9,6 +9,16 @@ A collection of reusable skills, agents, and configurations for AI-assisted soft
 | [interrogate-me](./.opencode/skills/interrogate-me/) | Complete technical specification interrogation — turns vague ideas into implementation-ready specs via MCQ-driven design tree walking |
 | [deepwrite](./.opencode/skills/deepwrite/) | Generate opinionated white papers from deep research — autonomous web research, source trust scoring, and a persistent knowledge base |
 | [humanize](./.opencode/skills/humanize/) | Remove signs of AI-generated writing using 47 researched patterns, a rapid checklist, and a mechanical pre-pass |
+
+## Plugins
+
+| Plugin | Description |
+|--------|-------------|
+| [token-count](./.opencode/plugins/) | Per-session token & cost tracking — persists a ledger, logs each model call, shows a TUI sidebar panel with live token usage |
+
+### Installing a plugin
+
+Copy the plugin files into the project's `.opencode/plugins/` directory (or `~/.config/opencode/plugins/` for global use). opencode auto-loads every plugin found there. The token-count plugin requires `@opencode-ai/plugin` in `.opencode/package.json`.
 
 ## Agents
 
@@ -65,6 +75,9 @@ hole-in-one/
 │   │   ├── planning-agent.md
 │   │   ├── coding-agent.md
 │   │   └── evaluating-agent.md
+│   ├── plugins/
+│   │   ├── token-count.ts
+│   │   └── token-count-tui.tsx
 │   └── skills/
 │       ├── interrogate-me/SKILL.md
 │       ├── deepwrite/
