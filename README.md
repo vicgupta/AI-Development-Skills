@@ -15,7 +15,6 @@ A collection of reusable skills, agents, plugins, and configurations for AI-assi
 | Plugin | Description |
 |--------|-------------|
 | [token-count](./.opencode/plugins/) | Per-session token & cost tracking — persists a ledger, logs each model call, shows a TUI sidebar panel with live token usage |
-| [token-usage-detailed](./.opencode/plugins/token-usage-detailed.tsx) | Detailed TUI sidebar metrics: token breakdown, cache usage, context-window utilization, cost, and recent steps |
 
 ### Installing a plugin
 
@@ -78,8 +77,7 @@ hole-in-one/
 │   │   └── evaluating-agent.md
 │   ├── plugins/
 │   │   ├── token-count.ts
-│   │   ├── token-count-tui.tsx
-│   │   └── token-usage-detailed.tsx
+│   │   └── token-count-tui.tsx
 │   └── skills/
 │       ├── interrogate-me/SKILL.md
 │       ├── deepwrite/
